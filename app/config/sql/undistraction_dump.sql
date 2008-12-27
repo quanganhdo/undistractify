@@ -27,7 +27,7 @@ CREATE TABLE `urls` (
   `id` char(36) NOT NULL default '',
   `name` varchar(255) default NULL,
   `address` text,
-  `limit` int(11) default NULL,
+  `limit` int(11) default '10',
   `created` datetime default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
