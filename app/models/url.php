@@ -26,8 +26,15 @@ class Url extends AppModel {
 	);
 	
 	function beforeSave() {
-		$this->data['Url']['title'] = empty($this->data['Url']['title']) ? $this->data['Url']['address'] : $this->data['Url']['title'];
+		if (isset($this->data['Url']['address'])) {
+			$this->data['Url']['title'] = empty($this->data['Url']['title']) ? $this->data['Url']['address'] : $this->data['Url']['title'];
+		}
 		return true;
+	}
+	
+	function visit($id) {
+		$this->id = $id;
+		$this->saveField('lastvisit', date('Y-m-d H:i:s', time()));
 	}
 	
 }

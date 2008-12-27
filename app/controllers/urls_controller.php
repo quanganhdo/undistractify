@@ -17,6 +17,11 @@ class UrlsController extends AppController {
 		}
 		
 		$url = $this->Url->findById($id);
+		if ($this->Time->wasWithinLast('15 minutes', $url['Url']['lastvisit'])) {
+			$this->redirect('/pages/stop');
+		} 
+		
+		$this->Url->visit($id);
 		$this->redirect($url['Url']['address']);
 	}
 	
