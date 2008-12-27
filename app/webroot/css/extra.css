@@ -1,0 +1,17 @@
+div#logo {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 40pt;
+	text-align: center;
+	margin: 20px auto;
+}
+
+div#logo a {
+	color: #000000;
+}
+
+div.content {
+	text-align: left;
+	width: 450px;
+	padding: 20px;
+	margin: auto;
+}

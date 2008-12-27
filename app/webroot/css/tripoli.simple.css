@@ -105,10 +105,10 @@ html {
 	font-size: 125%
 }
 body {
-	font-size: 50%
+	font-size: 70%
 }
 a {
-	text-decoration: underline
+	text-decoration: none
 }
 strong,th,thead td,h1,h2,h3,h4,h5,h6,dt {
 	font-weight: 700
