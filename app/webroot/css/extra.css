@@ -15,3 +15,8 @@ div.content {
 	padding: 20px;
 	margin: auto;
 }
+
+div#copyright {
+	font-size: 12px;
+	line-height: 16px;
+}

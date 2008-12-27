@@ -30,5 +30,10 @@
 	<div class="content">
 		<?php echo $content_for_layout ?>
 	</div>
+	<div id="copyright">
+		<?php __('Created by ') ?><?php echo $html->link('QAD', 'http://onetruebrace.com') ?> &middot;
+		<?php __('Powered by ') ?><?php echo $html->link('CakePHP', 'http://cakephp.org') ?><br />
+		<?php __('This project is ') ?><?php echo $html->link('accepting patches', 'http://github.com/quanganhdo/undistraction/tree/master') ?>
+	</div>
 </body>
 </html>

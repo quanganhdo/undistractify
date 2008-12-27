@@ -1,3 +1,4 @@
+<p style="text-align: center"><?php __('Drag these links to your Bookmark Bar to get started') ?></p>
 <ul>
 <?php foreach ((array) $urls as $url): ?>
 	<li>
@@ -5,3 +6,4 @@
 	</li>
 <?php endforeach ?>
 </ul>
+<p style="text-align: center"><?php echo $html->link(__('Add link', true), array('controller' => 'urls', 'action' => 'add')) ?></p>
