@@ -1,4 +1,4 @@
-<p style="text-align: center"><?php __('Drag these links to your Bookmark Bar to get started') ?></p>
+<p style="text-align: center"><?php __('Drag these links to your Bookmark Bar if you haven\'t done so') ?></p>
 <ul>
 <?php foreach ((array) $urls as $url): ?>
 	<li>

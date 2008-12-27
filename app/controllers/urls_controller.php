@@ -5,7 +5,10 @@ class UrlsController extends AppController {
 	
 	function index() {
 		$this->pageTitle = __('Home', true);
-		$this->set('urls', $this->Url->findAll());
+		$this->set('urls', $this->Url->find('all', array(
+			'order' => 'created DESC',
+			'limit' => '20'
+		)));
 	}
 	
 	function view($id = null) {
