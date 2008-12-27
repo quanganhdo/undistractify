@@ -1,4 +1,20 @@
+# OS-specific files
+
 .DS_Store
+
+# Installation-specific files
+
 app/config/database.php
 app/config/core.php
+
+# Tests
+
 app/tests
+
+# Caches & logs
+
+app/tmp/cache/cake_*
+app/tmp/cache/views/*.php
+app/tmp/cache/models/cake_*
+app/tmp/cache/persistent/cake_*
+app/tmp/logs/*.log
