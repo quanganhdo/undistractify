@@ -34,5 +34,20 @@ class UrlsController extends AppController {
 		}
 		$this->data['Url']['address'] = 'http://';
 	}	
+	
+	function edit($id = null) {
+		if (!$id) {
+			$this->redirect('/');
+		}
+		
+		if (!empty($this->data)) {
+			$this->Url->create($this->data);
+			$this->Url->id = $id;
+			if ($this->Url->save()) {
+				$this->redirect('/');
+			}
+		}
+		$this->data = $this->Url->findById($id);
+	}
 }
 ?>
