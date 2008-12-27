@@ -12,7 +12,7 @@
 
 CREATE TABLE `urls` (
   `id` char(36) NOT NULL default '',
-  `name` varchar(255) default NULL,
+  `title` varchar(255) default NULL,
   `address` text, 	
   `lastvisit` datetime default NULL,
   `created` datetime default NULL,
