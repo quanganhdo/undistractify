@@ -1,7 +1,7 @@
 <script type="text/javascript" charset="utf-8">
-	window.onload = function() {
-		document.getElementById('UrlAddress').focus();
-	}
+	$(function() {
+		$('#UrlAddress').focus();
+	});
 </script>
 
 <?php echo $form->create('Url') ?>

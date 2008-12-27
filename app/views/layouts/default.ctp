@@ -21,6 +21,7 @@
 	<?php echo $html->css('extra') ?>
 	
 	<!-- js -->
+	<?php echo $javascript->link('jquery-1.2.6.pack') ?>
 	<?php echo $scripts_for_layout ?>
 </head>
 <body style="text-align: center">
