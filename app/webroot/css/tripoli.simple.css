@@ -198,6 +198,7 @@ input,select,button {
 	cursor: pointer
 }
 input[type='text'],input[type='password'] {
+	width: 100%;
 	cursor: text
 }
 input[type='hidden'] {

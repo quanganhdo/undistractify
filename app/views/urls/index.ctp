@@ -2,7 +2,7 @@
 <ul>
 <?php foreach ((array) $urls as $url): ?>
 	<li>
-		<?php echo $html->link($url['Url']['title'], array('controller' => 'urls', 'action' => 'view', 'id' => $url['Url']['id'])) ?>	
+		<?php echo $html->link($text->truncate($url['Url']['title'], 45), array('controller' => 'urls', 'action' => 'view', 'id' => $url['Url']['id'])) ?>	
 	</li>
 <?php endforeach ?>
 </ul>

@@ -3,7 +3,10 @@ class Url extends AppModel {
 
 	var $name = 'Url';
 	var $validate = array(
-		'address' => array('url')
+		'address' => array(
+			'rule' => 'url',
+			'message' => 'Please specify a valid URL'
+		)
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -21,6 +24,11 @@ class Url extends AppModel {
 								'counterQuery' => ''
 			)
 	);
-
+	
+	function beforeSave() {
+		$this->data['Url']['title'] = empty($this->data['Url']['title']) ? $this->data['Url']['address'] : $this->data['Url']['title'];
+		return true;
+	}
+	
 }
 ?>
