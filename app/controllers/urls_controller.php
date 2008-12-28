@@ -11,6 +11,14 @@ class UrlsController extends AppController {
 		)));
 	}
 	
+	function original() {
+		$this->pageTitle = __('Original links', true);
+		$this->set('urls', $this->Url->find('all', array(
+			'order' => 'created DESC',
+			'limit' => '20'
+		)));
+	}
+	
 	function view($id = null) {
 		if (!$id) {
 			$this->redirect('/');
@@ -31,6 +39,7 @@ class UrlsController extends AppController {
 	}
 	
 	function add() {
+		$this->pageTitle = __('Add new link', true);
 		if (!empty($this->data)) {
 			$this->Url->create($this->data);
 			if ($this->Url->save()) {
@@ -55,6 +64,7 @@ class UrlsController extends AppController {
 	}	
 	
 	function edit($id = null) {
+		$this->pageTitle = __('Edit link', true);
 		if (!$id) {
 			$this->redirect('/');
 		}
