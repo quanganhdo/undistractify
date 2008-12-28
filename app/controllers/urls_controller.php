@@ -34,10 +34,24 @@ class UrlsController extends AppController {
 		if (!empty($this->data)) {
 			$this->Url->create($this->data);
 			if ($this->Url->save()) {
-				$this->redirect('/');
+				if (!$this->data['Url']['close']) {
+					$this->redirect('/');
+				}
+				$url = $this->Url->findById($this->Url->getLastInsertID());
+				$this->set('url', $url);
+				$this->layout = 'bare';
+				$this->render('undistractified');
 			}
 		}
-		$this->data['Url']['address'] = 'http://';
+		
+		if (!empty($this->params['url'])) {
+			$this->data['Url']['address'] = isset($this->params['url']['address']) ? $this->params['url']['address'] : 'http://';
+			$this->data['Url']['title'] = isset($this->params['url']['title']) ? $this->params['url']['title'] : '';
+			$this->set('close', 1);
+		} else {
+			$this->data['Url']['address'] = 'http://';
+			$this->set('close', 0);
+		}
 	}	
 	
 	function edit($id = null) {

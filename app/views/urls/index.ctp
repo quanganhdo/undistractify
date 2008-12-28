@@ -24,5 +24,6 @@
 
 <p style="text-align: center">
 	<?php echo $html->link(__('Add link', true), array('controller' => 'urls', 'action' => 'add')) ?> &middot;
+	<?php echo $html->link(__('Tools', true), '/pages/full/tools') ?> &middot;
 	<?php echo $html->link(__('FAQ', true), '/pages/full/faq') ?>
 </p>

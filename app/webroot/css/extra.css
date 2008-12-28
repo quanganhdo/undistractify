@@ -32,6 +32,18 @@ div.content span.actions a:hover {
 	padding: 2px;
 }
 
+a.bookmarklet {
+	border: solid 1px #36C;
+	padding: 2px;
+	background-color: #36C;
+	color: #FFFFFF;
+}
+
+a.bookmarklet:hover {
+	color: #36C;
+	background-color: #FFFFFF;
+}
+
 div#copyright {
 	font-size: 12px;
 	line-height: 16px;

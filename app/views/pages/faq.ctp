@@ -7,7 +7,7 @@
 
 <h2><?php __('How?') ?></h2>
 <p><?php __('Let\'s start by answering this question: How do you access your time-wast, er, favorite websites? By using your Bookmarks Bar, right?') ?></p>
-<p><?php __('If that is true, all you have to do is replace your existing bookmarks with your brand-new, undistraction<em>ified</em> ones. undistraction does the heavy work for you: everytime you click a bookmark, it checks the last time you visited this website; if it was within your pre-defined time interval, you get redirected to a blank page (not entirely blank, in fact). Otherwise, you are happy to go.') ?></p>
+<p><?php __('If that is true, all you have to do is replace your existing bookmarks with your brand-new, <em>undistractified</em> ones. undistraction does the heavy work for you: everytime you click a bookmark, it checks the last time you visited this website; if it was within your pre-defined time interval, you get redirected to a blank page (not entirely blank, in fact). Otherwise, you are happy to go.') ?></p>
 <p><?php __('That\'s it. You decide how long you want to stay on this page. undistraction doesn\'t try to babysit you, it is merely a barrier to prevent you from accessing time-wasting sites at the first place.') ?></p>
 
 <h2><?php __('I added loads of links. Why can\'t I see all of them?') ?></h2>

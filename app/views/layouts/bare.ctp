@@ -10,6 +10,15 @@
 	
 	<!-- favicon -->
 	<?php echo $html->meta('icon') ?>
+	
+	<!-- css -->
+	<?php echo $html->css('tripoli.simple') ?>
+	
+	<!--[if IE]>
+	<?php echo $html->css('tripoli.simple.ie') ?>
+	<![endif]-->
+	
+	<?php echo $html->css('extra') ?>
 </head>
 <body style="text-align: center">
 	<?php echo $content_for_layout ?>
