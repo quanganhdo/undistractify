@@ -29,7 +29,7 @@ class Url extends AppModel {
 		if (isset($this->data['Url']['address'])) {
 			$this->data['Url']['title'] = empty($this->data['Url']['title']) ? $this->data['Url']['address'] : $this->data['Url']['title'];
 		}
-		return true;
+		return parent::beforeSave();
 	}
 	
 	function visit($id) {

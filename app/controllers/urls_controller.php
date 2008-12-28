@@ -53,7 +53,7 @@ class UrlsController extends AppController {
 			}
 		}
 		
-		if (!empty($this->params['url'])) {
+		if (isset($this->params['url']['address'])) {
 			$this->data['Url']['address'] = isset($this->params['url']['address']) ? $this->params['url']['address'] : 'http://';
 			$this->data['Url']['title'] = isset($this->params['url']['title']) ? $this->params['url']['title'] : '';
 			$this->set('close', 1);
