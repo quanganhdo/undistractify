@@ -11,7 +11,7 @@
 <p><?php __('That\'s it. You decide how long you want to stay on this page. undistraction doesn\'t try to babysit you, it is merely a barrier to prevent you from accessing time-wasting sites at the first place.') ?></p>
 
 <h2><?php __('I added loads of links. Why can\'t I see all of them?') ?></h2>
-<p><?php __('By design, you are only able to see your most recent 20 links. Your other links are not deleted, they are just hidden from view. Seriously, if you need that much time-wasting websites, you should turn off your computer and get outside instead.') ?></p>
+<p><?php __('By design, you are only able to see your most recent 15 links. Your other links are not deleted, they are just hidden from view. Seriously, if you need that much time-wasting websites, you should turn off your computer and get outside instead.') ?></p>
 <p><?php __('What if I save them there for later, you may ask. Well, undistraction is not del.icio.us; using it as a bookmarking service is plain wrong.') ?></p>
 
 <h2><?php __('The layout is broken.') ?></h2>

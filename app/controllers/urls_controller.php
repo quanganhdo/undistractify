@@ -7,7 +7,7 @@ class UrlsController extends AppController {
 		$this->pageTitle = __('Home', true);
 		$this->set('urls', $this->Url->find('all', array(
 			'order' => 'created DESC',
-			'limit' => '20'
+			'limit' => '15'
 		)));
 	}
 	
@@ -15,7 +15,7 @@ class UrlsController extends AppController {
 		$this->pageTitle = __('Original links', true);
 		$this->set('urls', $this->Url->find('all', array(
 			'order' => 'created DESC',
-			'limit' => '20'
+			'limit' => '15'
 		)));
 	}
 	
