@@ -17,6 +17,11 @@ class UrlsController extends AppController {
 		}
 		
 		$url = $this->Url->findById($id);
+		
+		if (!$url) {
+			$this->redirect('/pages/blackhole');
+		}
+		
 		if ($this->Time->wasWithinLast('15 minutes', $url['Url']['lastvisit'])) {
 			$this->redirect('/pages/stop');
 		} 
@@ -48,6 +53,12 @@ class UrlsController extends AppController {
 			}
 		}
 		$this->data = $this->Url->findById($id);
+	}
+	
+	function delete($id = null) {
+		if (!$id || $this->Url->delete($id)) {
+			$this->redirect('/');
+		}		
 	}
 }
 ?>

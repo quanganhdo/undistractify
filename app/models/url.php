@@ -5,7 +5,7 @@ class Url extends AppModel {
 	var $validate = array(
 		'address' => array(
 			'rule' => 'url',
-			'message' => 'Please specify a valid URL'
+			'message' => 'A valid URL is required'
 		)
 	);
 
