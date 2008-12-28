@@ -18,7 +18,7 @@
 <p><?php __('I try my best to make sure undistraction renders correctly in different browsers, but I am by no mean a web designer. If it looks like crap in your browser, switching to Safari or Firefox might help.') ?></p>
 
 <h2><?php __('This website looks familiar.') ?></h2>
-<p><?php __('Yeah, undistraction\'s layout (and even this FAQ) is heavily inspired by instapaper by Marco Arment. It\'s not a blatant rip-off, though.') ?></p>
+<p><?php __('Yeah, undistraction\'s layout (and even this FAQ) is heavily inspired by Instapaper by Marco Arment. It\'s not a blatant rip-off, though.') ?></p>
 
 <h2><?php __('Something else?') ?></h2>
 <p><?php __('Shoot me an email if you have another question:') ?></p>
