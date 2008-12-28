@@ -1,34 +1,8 @@
-CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC. Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
+What does undistraction do?
+===========================
 
-The Cake Software Foundation - promoting development related to CakePHP
-http://www.cakefoundation.org/
+To cut a long story short, undistraction helps you deal with your procrastination.
 
-CakePHP - the rapid development PHP framework
-http://www.cakephp.org
+Have lots of things to do today? Still find yourself checking your Facebook profile, Digg homepage and programming.reddit every 30 minutes or so? You are not alone. undistraction is designed with you Internet addict in mind.
 
-Cookbook - user documentation for learning about CakePHP
-http://book.cakephp.org
-
-API - quick reference to CakePHP
-http://api.cakephp.org
-
-The Bakery - everything CakePHP
-http://bakery.cakephp.org
-
-The Show - live and archived podcasts about CakePHP and more
-http://live.cakephp.org
-
-CakePHP Google Group - community mailing list and forum
-http://groups.google.com/group/cake-php
-
-#cakephp on irc.freenode.net - chat with CakePHP developers
-irc://irc.freenode.net/cakephp
-
-CakeForge - open development for CakePHP
-http://cakeforge.org
-
-CakePHP gear
-http://www.cafepress.com/cakefoundation
-
-Recommended Reading
-http://astore.amazon.com/cakesoftwaref-20/
+undistraction makes sure you have to wait at least a pre-defined time interval before accessing a time-wasting website. Currently it is set to 1 hour.
