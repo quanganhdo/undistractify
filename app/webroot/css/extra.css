@@ -12,9 +12,24 @@ div#logo a {
 
 div.content {
 	text-align: left;
-	width: 460px;
+	width: 470px;
 	padding: 20px;
 	margin: auto;
+}
+
+div.content span.actions {
+	font-size: 0.8em;
+	display: none;
+}
+
+div.content span.actions a {
+	color: #4D4D4D;
+}
+
+div.content span.actions a:hover {
+	background-color: #4D4D4D;
+	color: #FFFFFF;
+	padding: 2px;
 }
 
 div#copyright {
