@@ -19,11 +19,11 @@ class UrlsController extends AppController {
 		$url = $this->Url->findById($id);
 		
 		if (!$url) {
-			$this->redirect('/pages/blackhole');
+			$this->redirect('/pages/lo-fi/blackhole');
 		}
 		
 		if ($this->Time->wasWithinLast('15 minutes', $url['Url']['lastvisit'])) {
-			$this->redirect('/pages/stop');
+			$this->redirect('/pages/lo-fi/stop');
 		} 
 		
 		$this->Url->visit($id);
