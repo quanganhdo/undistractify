@@ -1,4 +1,5 @@
-h1. What does undistractify do?
+What does undistractify do?
+===========================
 
 To cut a long story short, undistractify helps you deal with your procrastination.
 
