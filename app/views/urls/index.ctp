@@ -9,7 +9,7 @@
 		});
 	</script>
 	
-	<p style="text-align: center"><?php __('Drag these links to your Bookmarks Bar if you haven\'t done so. This is not your start page, so don\'t bother clicking them.') ?></p>
+	<p style="text-align: center"><?php __('Drag these links to your Bookmarks Bar if you haven\'t done so. You are only able to see your most recent 15 links') ?> (<?php echo $html->link(__('why?', true), '/pages/full/faq#15') ?>).</p>
 
 	<ul>
 	<?php foreach ((array) $urls as $url): ?>
