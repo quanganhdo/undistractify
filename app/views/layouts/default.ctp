@@ -26,7 +26,7 @@
 </head>
 <body style="text-align: center">
 	<div id="logo">
-		<?php echo $html->link('undistractify', '/') ?>
+		<?php echo $html->link('undistract<em>ify</em>', '/', array('escape' => false)) ?>
 	</div>
 	<div class="content">
 		<?php echo $content_for_layout ?>
