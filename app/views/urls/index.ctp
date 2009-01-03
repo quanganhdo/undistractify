@@ -23,5 +23,5 @@
 	<?php endforeach ?>
 	</ul>
 <?php else: ?>
-	<p style="text-align: center"><?php __('Welcome to undistraction!<br />Please add a couple of links to get started.') ?></p>
+	<p style="text-align: center"><?php __('Welcome to undistractify!<br />Please add a couple of links to get started.') ?></p>
 <?php endif ?>

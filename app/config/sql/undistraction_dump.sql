@@ -3,7 +3,7 @@
 # http://code.google.com/p/sequel-pro
 #
 # Host: localhost (MySQL 5.0.41)
-# Database: undistraction
+# Database: undistractify
 # Generation Time: 2008-12-27 16:38:05 +0000
 # ************************************************************
 

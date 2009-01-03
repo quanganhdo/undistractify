@@ -5,7 +5,7 @@
 	<?php echo $html->charset() ?>
 	
 	<title>
-		undistraction &middot; <?php echo $title_for_layout ?>
+		undistractify &middot; <?php echo $title_for_layout ?>
 	</title>
 	
 	<!-- favicon -->
@@ -26,7 +26,7 @@
 </head>
 <body style="text-align: center">
 	<div id="logo">
-		<?php echo $html->link('undistraction', '/') ?>
+		<?php echo $html->link('undistractify', '/') ?>
 	</div>
 	<div class="content">
 		<?php echo $content_for_layout ?>
@@ -40,7 +40,7 @@
 	<div id="copyright">
 		<?php __('Created by ') ?><?php echo $html->link('QAD', 'http://onetruebrace.com') ?> &middot;
 		<?php __('Powered by ') ?><?php echo $html->link('CakePHP', 'http://cakephp.org') ?><br />
-		<?php __('This project is ') ?><?php echo $html->link('accepting patches', 'http://github.com/quanganhdo/undistraction/tree/master') ?>
+		<?php __('This project is ') ?><?php echo $html->link('accepting patches', 'http://github.com/quanganhdo/undistractify/tree/master') ?>
 	</div>
 </body>
 </html>
