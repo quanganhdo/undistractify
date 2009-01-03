@@ -30,7 +30,7 @@ class UrlsController extends AppController {
 			$this->redirect('/pages/lo-fi/blackhole');
 		}
 		
-		if ($this->Time->wasWithinLast('1 hour', $url['Url']['lastvisit'])) {
+		if ($this->Time->wasWithinLast(Configure::read('Default.interval'), $url['Url']['lastvisit'])) {
 			$this->redirect('/pages/lo-fi/stop');
 		} 
 		

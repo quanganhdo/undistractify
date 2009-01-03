@@ -3,7 +3,7 @@
 <h2><?php __('What does undistractify do?') ?></h2>
 <p><?php __('To cut a long story short, undistractify helps you deal with your procrastination.') ?></p>
 <p><?php __('Have lots of things to do today? Still find yourself checking your Facebook profile, Digg homepage and programming.reddit every 30 minutes or so? You are not alone. undistractify is designed with you Internet addict in mind.') ?></p>
-<p><?php __('undistractify makes sure you have to wait at least a pre-defined time interval before accessing a time-wasting website. Currently it is set to 1 hour.') ?></p>
+<p><?php __('undistractify makes sure you have to wait at least a pre-defined time interval before accessing a time-wasting website. Currently it is set to') ?> <?php echo Configure::read('Default.interval') ?>.</p>
 
 <h2><?php __('How?') ?></h2>
 <p><?php __('Let\'s start by answering this question: How do you access your time-wast, er, favorite websites? By using your Bookmarks Bar, right?') ?></p>
@@ -16,9 +16,6 @@
 	<?php __('What if I save them there for later viewing, you may ask. Well, undistractify is not ') ?>
 	<?php echo $html->link('delicious', 'http://delicious.com') ?><?php __('; using it as a bookmarking service is plain wrong.') ?>
 </p>
-
-<h2><?php __('1 hour is too long/short! I want to change that interval!') ?></h2>
-<p><?php __('At the moment this is impossible. This feature might be added soon.') ?></p>
 
 <h2><?php __('The layout is broken.') ?></h2>
 <p><?php __('I try my best to make sure undistractify renders correctly in different browsers, but I am by no mean a web designer. If it looks like crap in your browser, switching to Safari or Firefox might help.') ?></p>
