@@ -12,7 +12,10 @@
 
 <h2><?php __('I added loads of links. Why can\'t I see all of them?') ?></h2>
 <p><?php __('By design, you are only able to see your most recent 15 links. Your other links are not deleted, they are just hidden from view. Seriously, if you need that much time-wasting websites, you should turn off your computer and get outside instead.') ?></p>
-<p><?php __('What if I save them there for later viewing, you may ask. Well, undistractify is not del.icio.us; using it as a bookmarking service is plain wrong.') ?></p>
+<p>
+	<?php __('What if I save them there for later viewing, you may ask. Well, undistractify is not ') ?>
+	<?php echo $html->link('delicious', 'http://delicious.com') ?><?php __('; using it as a bookmarking service is plain wrong.') ?>
+</p>
 
 <h2><?php __('1 hour is too long/short! I want to change that interval!') ?></h2>
 <p><?php __('At the moment this is impossible. This feature might be added soon.') ?></p>
@@ -23,8 +26,7 @@
 <h2><?php __('This website looks familiar.') ?></h2>
 <p>
 	<?php __('Yeah, undistractify\'s layout (and even this FAQ) is heavily inspired by Marco Arment\'s ') ?>
-	<?php echo $html->link('Instapaper', 'http://instapaper.com') ?> 
-	<?php __('. It isn\'t a blatant rip-off, though.') ?>
+	<?php echo $html->link('Instapaper', 'http://instapaper.com') ?><?php __('. It isn\'t a blatant rip-off, though.') ?>
 </p>
 
 <h2><?php __('Something else?') ?></h2>
