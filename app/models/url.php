@@ -18,7 +18,7 @@ class Url extends AppModel {
 	
 	function visit($id) {
 		$this->id = $id;
-		$this->saveField('lastvisit', date('Y-m-d H:i:s', time()));
+		$this->saveField('lastvisit', date('Y-m-d H:i:s'));
 	}
 	
 }
