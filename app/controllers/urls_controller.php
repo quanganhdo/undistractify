@@ -31,7 +31,7 @@ class UrlsController extends AppController {
 		}
 		
 		if ($this->Time->wasWithinLast(Configure::read('Default.interval'), $url['Url']['lastvisit'])) {
-			$this->redirect('/pages/lo-fi/stop');
+			$this->redirect('http://www.merlinmann.com/rightnow/');
 		} 
 		
 		$this->Url->visit($id);
