@@ -27,7 +27,7 @@ class UrlsController extends AppController {
 		$url = $this->Url->findById($id);
 		
 		if (!$url) {
-			$this->redirect('/pages/lo-fi/blackhole');
+			$this->redirect('http://www.weirdity.com/internet/eoti.html');
 		}
 		
 		if ($this->Time->wasWithinLast(Configure::read('Default.interval'), $url['Url']['lastvisit'])) {
@@ -48,8 +48,7 @@ class UrlsController extends AppController {
 				}
 				$url = $this->Url->findById($this->Url->getLastInsertID());
 				$this->set('url', $url);
-				$this->layout = 'bare';
-				$this->render('undistractified');
+				$this->render('undistractified', 'bare');
 			}
 		}
 		
