@@ -5,16 +5,18 @@ class UsersController extends AppController {
 	var $uses = array('User', 'Url');
 
 	function index() {
-		$this->set('urls', $this->Session->read('Account.Url'));
+		$this->User->contain('Url');
+		$user = $this->User->findById($this->userID());
+		$this->set('urls', $user['Url']);
 	}
 	
 	function login() {
 		if (!empty($this->data)) {
-			$this->User->contain('Url');
+			$this->User->contain();
 			$user = $this->User->findByName($this->data['User']['name']);
 			if ($user) {
 				$this->Cookie->write('u', $user['User']['id']);
-				$this->Session->write('Account', $user);
+				$this->Session->write('User', $user['User']);
 			}
 		}
 		$this->redirect('/');

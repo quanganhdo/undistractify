@@ -9,10 +9,10 @@ class AppController extends Controller {
 		$this->Cookie->time = '365 days';
 		
 		if ($this->isGuest() && $this->Cookie->read('u')) {
-			$this->User->contain('Url');
-			$user = $this->User->findById($this->Cookie->read('u'));
+			$this->User->contain();
+			$user = $this->User->read(null, $this->Cookie->read('u'));
 			if ($user) {
-				$this->Session->write('Account', $user);
+				$this->Session->write('User', $user['User']);
 			}
 		}
 		
@@ -22,7 +22,7 @@ class AppController extends Controller {
 	}
 	
 	function isGuest() {
-		return !$this->Session->check('Account');
+		return !$this->Session->check('User');
 	}
 	
 	function authenticationNeeded() {
@@ -30,7 +30,7 @@ class AppController extends Controller {
 	}
 	
 	function userID() {
-		return $this->Session->read('Account.User.id');
+		return $this->Session->read('User.id');
 	}
 	
 }
