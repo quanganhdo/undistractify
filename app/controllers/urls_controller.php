@@ -3,14 +3,6 @@ class UrlsController extends AppController {
 
 	var $name = 'Urls';
 	
-	function index() {
-		$this->pageTitle = __('Home', true);
-		$this->set('urls', $this->Url->find('all', array(
-			'order' => 'created DESC',
-			'limit' => '15'
-		)));
-	}
-	
 	function original() {
 		$this->pageTitle = __('Original links', true);
 		$this->set('urls', $this->Url->find('all', array(
