@@ -20,7 +20,7 @@ class UrlsController extends AppController {
 		$url = $this->Url->findById($id);
 		
 		if (!$url) {
-			$this->redirect('http://www.weirdity.com/internet/eoti.html');
+			$this->redirect('/');
 		}
 		
 		if ($this->Time->wasWithinLast(Configure::read('Default.interval'), $url['Url']['lastvisit'])) {
@@ -68,6 +68,13 @@ class UrlsController extends AppController {
 			$this->redirect('/');
 		}
 		
+		$this->Url->contain();
+		$url = $this->Url->findById($id);
+		
+		if ($url['Url']['user_id'] != $this->userID()) {
+			$this->redirect('/');
+		}
+		
 		if (!empty($this->data)) {
 			$this->Url->create($this->data);
 			$this->Url->id = $id;
@@ -79,9 +86,20 @@ class UrlsController extends AppController {
 	}
 	
 	function delete($id = null) {
-		if (!$id || $this->Url->delete($id)) {
+		if (!$id) {
 			$this->redirect('/');
 		}		
+		
+		$this->Url->contain();
+		$url = $this->Url->findById($id);
+		
+		if ($url['Url']['user_id'] != $this->userID()) {
+			$this->redirect('/');
+		}
+		
+		if ($this->Url->delete($id)) {
+			$this->redirect('/');
+		}
 	}
 }
 ?>
