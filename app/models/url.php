@@ -8,6 +8,15 @@ class Url extends AppModel {
 			'message' => 'A valid URL is required'
 		)
 	);
+	
+	var $belongsTo = array(
+			'User' => array('className' => 'User',
+								'foreignKey' => 'user_id',
+								'conditions' => '',
+								'fields' => '',
+								'order' => ''
+			)
+	);
 
 	function beforeSave() {
 		if (isset($this->data['Url']['address'])) {
