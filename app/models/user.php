@@ -3,6 +3,8 @@ class User extends AppModel {
 	
 	var $name = 'User';
 	
+	var $actsAs = array('Containable');
+	
 	var $hasMany = array(
 			'Url' => array('className' => 'Url',
 								'foreignKey' => 'user_id',
