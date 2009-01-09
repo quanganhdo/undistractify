@@ -9,7 +9,8 @@ class AppController extends Controller {
 		$this->Cookie->time = '365 days';
 		
 		if (!$this->Session->check('Account') && $this->Cookie->read('u')) {
-			$user = $this->User->read(null, $this->Cookie->read('u'));
+			$this->User->contain('Url');
+			$user = $this->User->findById($this->Cookie->read('u'));
 			if ($user) {
 				$this->Session->write('Account', $user);
 			}
