@@ -43,7 +43,7 @@ class UrlsController extends AppController {
 					$this->redirect('/');
 				}
 				// bookmarklet
-				$url = $this->Url->findById($this->Url->getLastInsertID());
+				$url = $this->Url->findById($this->Url->id);
 				$this->set('url', $url);
 				$this->render('undistractified', 'bare');
 			}
