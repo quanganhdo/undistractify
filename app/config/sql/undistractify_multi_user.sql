@@ -4,7 +4,7 @@
 #
 # Host: localhost (MySQL 5.0.41)
 # Database: undistractify
-# Generation Time: 2009-01-09 17:15:02 +0000
+# Generation Time: 2009-01-09 23:54:40 +0000
 # ************************************************************
 
 # Dump of table urls
@@ -16,7 +16,7 @@ CREATE TABLE `urls` (
   `address` text,
   `lastvisit` datetime default NULL,
   `created` datetime default NULL,
-  `user_id` int(11) NOT NULL,
+  `user_id` char(36) NOT NULL default '',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -26,7 +26,7 @@ CREATE TABLE `urls` (
 # ------------------------------------------------------------
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL auto_increment,
+  `id` char(36) NOT NULL default '',
   `name` varchar(255) default NULL,
   `interval` varchar(255) NOT NULL default '1 hour',
   `created` datetime default NULL,
