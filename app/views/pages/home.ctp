@@ -10,7 +10,7 @@
 <h1 style="text-align: center"><?php __('How it works') ?></h1>
 
 <ol>
-	<li><?php __('You identify websites that you can spend hours clicking around without no particular reason except boredom, procrastination, or lack of more creative ways to spend your time.') ?></li>
+	<li><?php __('You identify websites that you can spend hours clicking around with no particular reason except boredom, procrastination, or lack of more creative ways to spend your time.') ?></li>
 	<li><?php __('You transform their URLs into <em>undistractified</em> ones.') ?></li>
 	<li><?php __('You use them instead of your regular bookmarks.') ?></li>
 </ol>
