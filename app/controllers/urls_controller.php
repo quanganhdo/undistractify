@@ -20,7 +20,7 @@ class UrlsController extends AppController {
 		$url = $this->Url->findById($id);
 		
 		if (!$url) {
-			$this->redirect('/');
+			$this->redirect('http://www.weirdity.com/internet/eoti.html');
 		}
 		
 		if ($this->Time->wasWithinLast(Configure::read('Default.interval'), $url['Url']['lastvisit'])) {
