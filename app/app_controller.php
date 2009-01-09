@@ -8,9 +8,12 @@ class AppController extends Controller {
 		$this->Cookie->name = 'undistractify';
 		$this->Cookie->time = '365 days';
 		
-		if ($this->isGuest() && $this->Cookie->read('u')) {
+		// two ways to login automatically:
+		// - Login by cookie (u -> user id)
+		// - Login by $_GET token (tk -> user id)
+		if ($this->isGuest() && ($this->Cookie->read('u') || isset($this->params['url']['tk']))) {
 			$this->User->contain();
-			$user = $this->User->read(null, $this->Cookie->read('u'));
+			$user = $this->User->read(null, $this->Cookie->read('u') ? $this->Cookie->read('u') : $this->params['url']['tk']);
 			if ($user) {
 				$this->Session->write('User', $user['User']);
 			}
@@ -19,6 +22,8 @@ class AppController extends Controller {
 		if ($this->authenticationNeeded() && $this->isGuest()) {
 			$this->redirect('/pages/home');
 		}
+		
+		$this->set('userID', $this->userID());
 	}
 	
 	function isGuest() {
