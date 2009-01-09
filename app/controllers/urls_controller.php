@@ -16,6 +16,7 @@ class UrlsController extends AppController {
 			$this->redirect('/');
 		}
 		
+		$this->Url->contain();
 		$url = $this->Url->findById($id);
 		
 		if (!$url) {
@@ -62,6 +63,7 @@ class UrlsController extends AppController {
 	
 	function edit($id = null) {
 		$this->pageTitle = __('Edit link', true);
+		
 		if (!$id) {
 			$this->redirect('/');
 		}

@@ -2,6 +2,9 @@
 class Url extends AppModel {
 
 	var $name = 'Url';
+	
+	var $actsAs = array('Containable');
+	
 	var $validate = array(
 		'address' => array(
 			'rule' => 'url',
