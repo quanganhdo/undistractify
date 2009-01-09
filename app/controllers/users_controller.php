@@ -5,11 +5,7 @@ class UsersController extends AppController {
 	var $uses = array('User', 'Url');
 
 	function index() {
-		if ($this->isGuest()) {
-			$this->redirect('/pages/home');
-		} else {
-			$this->set('urls', $this->Session->read('Account.Url'));
-		}
+		$this->set('urls', $this->Session->read('Account.Url'));
 	}
 	
 	function login() {

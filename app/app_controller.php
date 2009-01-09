@@ -16,10 +16,17 @@ class AppController extends Controller {
 			}
 		}
 		
+		if ($this->authenticationNeeded() && $this->isGuest()) {
+			$this->redirect('/pages/home');
+		}
 	}
 	
 	function isGuest() {
 		return !$this->Session->check('Account');
+	}
+	
+	function authenticationNeeded() {
+		return $this->name != 'Pages' && $this->action != 'login';
 	}
 	
 }
