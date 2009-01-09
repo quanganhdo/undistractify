@@ -41,6 +41,7 @@ class UrlsController extends AppController {
 	function add() {
 		$this->pageTitle = __('Add new link', true);
 		if (!empty($this->data)) {
+			$this->data['Url']['user_id'] = $this->userID();
 			$this->Url->create($this->data);
 			if ($this->Url->save()) {
 				if (!$this->data['Url']['close']) {

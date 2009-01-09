@@ -29,5 +29,9 @@ class AppController extends Controller {
 		return $this->name != 'Pages' && $this->action != 'login';
 	}
 	
+	function userID() {
+		return $this->Session->read('Account.User.id');
+	}
+	
 }
 ?>
