@@ -26,7 +26,16 @@ class AppController extends Controller {
 	}
 	
 	function authenticationNeeded() {
-		return $this->name != 'Pages' && $this->action != 'login';
+		// allow:
+		// - Pages.*
+		// - Users.login
+		// - Urls.view
+		// deny
+		// - the rest
+		return $this->name != 'Pages' && !in_array("{$this->name}.{$this->action}", array(
+			'Users.login', 
+			'Urls.view'
+		));
 	}
 	
 	function userID() {
