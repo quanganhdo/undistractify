@@ -8,13 +8,18 @@ class AppController extends Controller {
 		$this->Cookie->name = 'undistractify';
 		$this->Cookie->time = '365 days';
 		
-		if (!$this->Session->check('Account') && $this->Cookie->read('u')) {
+		if ($this->isGuest() && $this->Cookie->read('u')) {
 			$this->User->contain('Url');
 			$user = $this->User->findById($this->Cookie->read('u'));
 			if ($user) {
 				$this->Session->write('Account', $user);
 			}
 		}
+		
+	}
+	
+	function isGuest() {
+		return !$this->Session->check('Account');
 	}
 	
 }
