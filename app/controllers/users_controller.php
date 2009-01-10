@@ -56,5 +56,15 @@ class UsersController extends AppController {
 		$this->data = $this->User->findById($this->userID());
 	}
 
+	function clean() {
+		$this->User->contain();
+		$total = $this->User->find('count', array('conditions' => array('url_count' => 0)));
+
+		if ($total > 0) {
+			$this->User->deleteAll(array('url_count' => 0));
+		}
+
+		$this->set('total', $total);
+	}
 }
 ?>

@@ -35,12 +35,13 @@ class AppController extends Controller {
 	function authenticationNeeded() {
 		// allow:
 		// - Pages.*
-		// - Users.login
+		// - Users.(login|clean)
 		// - Urls.view
 		// deny
 		// - the rest
 		return $this->name != 'Pages' && !in_array("{$this->name}.{$this->action}", array(
 			'Users.login', 
+			'Users.clean',
 			'Urls.view'
 		));
 	}

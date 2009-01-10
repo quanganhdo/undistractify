@@ -29,6 +29,7 @@ CREATE TABLE `users` (
   `id` char(36) NOT NULL default '',
   `name` varchar(255) default NULL,
   `interval` varchar(255) NOT NULL default '1 hour',
+  `url_count` INT( 11 ) NOT NULL default '0',
   `created` datetime default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
