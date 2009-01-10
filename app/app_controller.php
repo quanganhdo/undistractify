@@ -9,6 +9,8 @@ class AppController extends Controller {
 		$this->Cookie->name = 'undistractify';
 		$this->Cookie->time = '365 days';
 		
+		$this->set('isGuest', $this->isGuest());
+		
 		// two ways to login automatically:
 		// - Login by cookie (u -> user id)
 		// - Login by $_GET token (tk -> user id)

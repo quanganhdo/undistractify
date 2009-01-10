@@ -31,16 +31,18 @@
 	<div class="content">
 		<?php echo $content_for_layout ?>
 		
+		<?php if (!$isGuest): ?>
 		<p style="text-align: center">
-			<?php echo $html->link(__('Add link', true), array('controller' => 'urls', 'action' => 'add'), array('id' => 'add')) ?> &middot;
+			<?php echo $html->link(__('Add link', true), array('controller' => 'urls', 'action' => 'add')) ?> &middot;
 			<?php echo $html->link(__('Tools', true), '/pages/tools') ?> &middot;
-			<?php echo $html->link(__('FAQ', true), '/pages/faq') ?>
+			<?php echo $html->link(__('Log out', true), array('controller' => 'users', 'action' => 'logout')) ?> 
 		</p>
+		<?php endif ?>
 	</div>
 	<div id="copyright">
-		<?php __('Created by ') ?><?php echo $html->link('QAD', 'http://onetruebrace.com') ?> &middot;
-		<?php __('Powered by ') ?><?php echo $html->link('CakePHP', 'http://cakephp.org') ?><br />
-		<?php __('This project is ') ?><?php echo $html->link('accepting patches', 'http://github.com/quanganhdo/undistractify/tree/master') ?>
+		<?php echo $html->link(__('FAQ', true), '/pages/faq') ?> &middot;
+		<?php __('Created by ') ?><?php echo $html->link('Quang Anh Do', 'http://onetruebrace.com') ?><br />
+		<?php __('This project is powered by ') ?><?php echo $html->link('CakePHP', 'http://cakephp.org') ?>
 	</div>
 </body>
 </html>
