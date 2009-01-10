@@ -46,5 +46,5 @@
 		</p>
 	<?php endif ?>
 <?php else: ?>
-	<p style="text-align: center"><?php __('Welcome to undistractify!<br />Please add some time-wasting URLs using the link below.') ?></p>
+	<p style="text-align: center"><?php __('Hello newcomer!<br />Add your most time-wasting URL using the green link below.') ?></p>
 <?php endif ?>

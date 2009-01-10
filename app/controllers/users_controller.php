@@ -23,10 +23,14 @@ class UsersController extends AppController {
 		if (!empty($this->data)) {
 			$this->User->contain();
 			$user = $this->User->findByName($this->data['User']['name']);
-			if ($user) {
-				$this->Cookie->write('u', $user['User']['id']);
-				$this->Session->write('User', $user['User']);
+			if (!$user) {
+				// new account
+				$this->User->create($this->data);
+				$this->User->save();
+				$user = $this->User->findById($this->User->id);
 			}
+			$this->Cookie->write('u', $user['User']['id']);
+			$this->Session->write('User', $user['User']);
 		}
 		$this->redirect('/');
 	}

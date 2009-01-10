@@ -44,6 +44,10 @@ a.bookmarklet:hover {
 	background-color: #FFFFFF;
 }
 
+a#add {
+	color: green;
+}
+
 div#copyright {
 	font-size: 12px;
 	line-height: 16px;
