@@ -19,6 +19,7 @@ class AppController extends Controller {
 			$user = $this->User->read(null, $this->Cookie->read('u') ? $this->Cookie->read('u') : $this->params['url']['tk']);
 			if ($user) {
 				$this->Session->write('User', $user['User']);
+				$this->set('isGuest', $this->isGuest());
 			}
 		}
 		

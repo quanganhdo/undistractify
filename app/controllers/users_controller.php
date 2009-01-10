@@ -33,6 +33,20 @@ class UsersController extends AppController {
 		$this->Cookie->destroy();
 		$this->redirect('/');
 	}
+	
+	function account() {
+		if (!empty($this->data)) {
+			$this->User->create($this->data);
+			$this->User->id = $this->userID();
+			if ($this->User->save()) {
+				$this->Session->destroy();
+				$this->redirect('/');
+			}
+		}
+		
+		$this->User->contain();
+		$this->data = $this->User->findById($this->userID());
+	}
 
 }
 ?>
