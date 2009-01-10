@@ -5,6 +5,13 @@ class User extends AppModel {
 	
 	var $actsAs = array('Containable');
 	
+	var $validate = array(
+		'name' => array(
+			'rule' => array('isUnique', 'name'),
+			'message' => 'Must be unique'
+		)
+	);
+	
 	var $hasMany = array(
 			'Url' => array('className' => 'Url',
 								'foreignKey' => 'user_id',
