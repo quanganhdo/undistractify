@@ -1,7 +1,7 @@
 <?php
 class AppController extends Controller {
 	
-	var $components = array('DebugKit.Toolbar', 'Time', 'Session', 'Cookie');
+	var $components = array('Time', 'Session', 'Cookie');
 	var $helpers = array('Html', 'Form', 'Text', 'Javascript', 'Session');
 	var $uses = array('Url', 'User');
 	
