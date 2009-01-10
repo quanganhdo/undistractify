@@ -15,8 +15,6 @@
 
 <p><?php __('You can enter whatever you want here. If this is the first time you use undistractify, your account would be created on the fly. Otherwise, you will be redirected to your dashboard.') ?></p>
 
-<p><?php __('There\'s no password to remember, no email address to give in. All you need is a username. It\'s as simple as that.') ?></p>
-
 <hr />
 
 <h1 style="text-align: center"><?php __('How it works') ?></h1>

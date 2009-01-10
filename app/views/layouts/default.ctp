@@ -34,7 +34,7 @@
 		<?php if (!$isGuest): ?>
 		<p style="text-align: center">
 			<?php echo $html->link(__('Add link', true), array('controller' => 'urls', 'action' => 'add')) ?> &middot;
-			<?php echo $html->link(__('Tools', true), '/pages/tools') ?> &middot;
+			<?php echo $html->link(__('Bookmarklet', true), '/pages/bookmarklet') ?> &middot;
 			<?php echo $html->link(__('Log out', true), array('controller' => 'users', 'action' => 'logout')) ?> 
 		</p>
 		<?php endif ?>

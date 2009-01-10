@@ -3,14 +3,6 @@ class UrlsController extends AppController {
 
 	var $name = 'Urls';
 	
-	function original() {
-		$this->pageTitle = __('Original links', true);
-		$this->set('urls', $this->Url->find('all', array(
-			'order' => 'created DESC',
-			'limit' => '15'
-		)));
-	}
-	
 	function view($id = null) {
 		if (!$id) {
 			$this->redirect('/');
