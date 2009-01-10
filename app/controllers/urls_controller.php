@@ -74,7 +74,7 @@ class UrlsController extends AppController {
 				$this->redirect('/');
 			}
 		}
-		$this->data = $this->Url->findById($id);
+		$this->data = $url;
 	}
 	
 	function delete($id = null) {

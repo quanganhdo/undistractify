@@ -25,8 +25,6 @@ class AppController extends Controller {
 		if ($this->authenticationNeeded() && $this->isGuest()) {
 			$this->redirect('/pages/home');
 		}
-		
-		$this->set('userID', $this->userID());
 	}
 	
 	function isGuest() {
