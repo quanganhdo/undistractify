@@ -22,6 +22,8 @@
 		</li>
 	<?php endforeach ?>
 	</ul>
+	
+	<p style="text-align: center"><em><?php __('If you want to see your original links, click ') ?><?php echo $html->link(__('here', true), array('controller' => 'users', 'action' => 'original')) ?>.</em></p>
 <?php else: ?>
 	<p style="text-align: center"><?php __('Welcome to undistractify!<br />Please add some time-wasting URLs using the link below.') ?></p>
 <?php endif ?>

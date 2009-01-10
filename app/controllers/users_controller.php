@@ -10,6 +10,12 @@ class UsersController extends AppController {
 		$this->set('urls', $user['Url']);
 	}
 	
+	function original() {
+		$this->User->contain('Url');
+		$user = $this->User->findById($this->userID());
+		$this->set('urls', $user['Url']);
+	}
+	
 	function login() {
 		if (!empty($this->data)) {
 			$this->User->contain();
