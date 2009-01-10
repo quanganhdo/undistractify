@@ -30,28 +30,29 @@ class UrlsController extends AppController {
 			$this->data['Url']['user_id'] = $this->userID();
 			$this->Url->create($this->data);
 			if ($this->Url->save()) {
-				if (!$this->data['Url']['close']) {
-					// on-site
-					$this->redirect('/');
-				}
-				// bookmarklet
-				$url = $this->Url->findById($this->Url->id);
-				$this->set('url', $url);
-				$this->render('undistractified', 'bare');
+				$this->redirect('/');
 			}
 		}
 		
-		if (isset($this->params['url']['address'])) {
-			// bookmarklet
-			$this->data['Url']['address'] = isset($this->params['url']['address']) ? $this->params['url']['address'] : 'http://';
-			$this->data['Url']['title'] = isset($this->params['url']['title']) ? $this->params['url']['title'] : '';
-			$this->set('close', 1);
-		} else {
-			// on-site
-			$this->data['Url']['address'] = 'http://';
-			$this->set('close', 0);
-		}
+		$this->data['Url']['address'] = 'http://';
 	}	
+	
+	function bml() {
+		$this->pageTitle = __('Add new link', true);
+		
+		if (!empty($this->data)) {
+			$this->data['Url']['user_id'] = $this->userID();
+			$this->Url->create($this->data);
+			if ($this->Url->save()) {
+				$url = $this->Url->findById($this->Url->id);
+				$this->set('url', $url);
+				$this->render('undistractified');
+			}
+		}
+		
+		$this->data['Url']['address'] = isset($this->params['url']['address']) ? $this->params['url']['address'] : 'http://';
+		$this->data['Url']['title'] = isset($this->params['url']['title']) ? $this->params['url']['title'] : '';
+	}
 	
 	function edit($id = null) {
 		$this->pageTitle = __('Edit link', true);
