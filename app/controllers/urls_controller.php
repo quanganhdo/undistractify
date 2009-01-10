@@ -15,7 +15,7 @@ class UrlsController extends AppController {
 			$this->redirect(Configure::read('404_NOT_FOUND'));
 		}
 		
-		if ($this->Time->wasWithinLast($url['User']['interval'], $url['Url']['lastvisit'])) {
+		if ($url['User']['interval'] != 'infinity' && $this->Time->wasWithinLast($url['User']['interval'], $url['Url']['lastvisit'])) {
 			$this->redirect(Configure::read('403_FORBIDDEN'));
 		} 
 		

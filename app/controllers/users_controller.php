@@ -9,6 +9,7 @@ class UsersController extends AppController {
 		$this->User->contain('Url');
 		$user = $this->User->findById($this->userID());
 		$this->set('urls', $user['Url']);
+		$this->set('interval', $user['User']['interval']);
 	}
 	
 	function original() {
