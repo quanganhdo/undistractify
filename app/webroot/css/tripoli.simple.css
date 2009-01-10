@@ -204,6 +204,9 @@ input[type='text'],input[type='password'] {
 input[type='hidden'] {
 	display: none
 }
+select {
+	width: 100%;
+}
 /*
 _______________________________
 CONTENT */
