@@ -5,12 +5,14 @@ class UsersController extends AppController {
 	var $uses = array('User', 'Url');
 
 	function index() {
+		$this->pageTitle = __('Dashboard', true);
 		$this->User->contain('Url');
 		$user = $this->User->findById($this->userID());
 		$this->set('urls', $user['Url']);
 	}
 	
 	function original() {
+		$this->pageTitle = __('Original links', true);
 		$this->User->contain('Url');
 		$user = $this->User->findById($this->userID());
 		$this->set('urls', $user['Url']);
@@ -35,6 +37,7 @@ class UsersController extends AppController {
 	}
 	
 	function account() {
+		$this->pageTitle = __('Account', true);
 		if (!empty($this->data)) {
 			$this->User->create($this->data);
 			$this->User->id = $this->userID();
