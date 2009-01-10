@@ -16,15 +16,15 @@ class UrlsController extends AppController {
 			$this->redirect('/');
 		}
 		
-		$this->Url->contain();
+		$this->Url->contain('User');
 		$url = $this->Url->findById($id);
 		
 		if (!$url) {
-			$this->redirect('http://www.weirdity.com/internet/eoti.html');
+			$this->redirect(Configure::read('404_NOT_FOUND'));
 		}
 		
-		if ($this->Time->wasWithinLast(Configure::read('Default.interval'), $url['Url']['lastvisit'])) {
-			$this->redirect('http://www.merlinmann.com/rightnow/');
+		if ($this->Time->wasWithinLast($url['User']['interval'], $url['Url']['lastvisit'])) {
+			$this->redirect(Configure::read('403_FORBIDDEN'));
 		} 
 		
 		$this->Url->visit($id);
